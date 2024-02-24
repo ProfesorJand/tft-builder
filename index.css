@@ -4,4 +4,10 @@
     height: 500px;
     background-color: aqua;
     flex-direction: row;
+    flex-wrap: wrap;
+}
+.img-champions{
+    height: 40px;
+    width: 40px;
+
 }
