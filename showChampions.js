@@ -5,8 +5,8 @@ async function showChampions(){
     const champions = await fetch(url).then(resp=>resp.json()).then(data=>data);
     const championsContainer = document.getElementById("championsContainer");
     console.log(champions)
-    const imagenElem = document.createElement("img");
     champions.forEach(element => {
+        const imagenElem = document.createElement("img");
         const src = urlDdragon + element.tileIcon.replace(".dds",".png").toLowerCase();
         imagenElem.src=src;
         imagenElem.alt="champion "+ element.
