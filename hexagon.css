@@ -1,6 +1,6 @@
 :root {
     /* Change this to change the appearance of the hexaons */
-    --hex-width: 100px; 
+    --hex-width: 10em; 
     --hex-between: 10px;
     
     /* Other hexagon dimentions */
@@ -14,11 +14,11 @@
 
 /* Hexagons */
 .hexagon-container {
-    display: grid;
-    grid-template-columns: var(--hex-width) var(--hex-width) var(--hex-width) var(--hex-width) var(--hex-width) var(--hex-width) var(--hex-width);
-    grid-auto-rows: calc(var(--hex-width) - 28.87px/2);
-    grid-gap: var(--hex-between) var(--hex-between);
-    padding: var(--hex-border) 0px;
+  display: grid;
+  grid-template-columns: var(--hex-height) var(--hex-height) var(--hex-height) var(--hex-height) var(--hex-height) var(--hex-height) var(--hex-height);
+  grid-auto-rows: var(--hex-height);
+  grid-gap: 0px 10px;
+  padding: var(--hex-border) 0px;
   }
   .hexagon {
     align-items: center;
