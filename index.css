@@ -3,36 +3,59 @@
     /* Change this to change the appearance of the hexaons */
     --hex-width: 4em; 
     --hex-between: 10px;
+    --hex-height: calc((var(--hex-width) *1.15));
     
     /* Other hexagon dimentions */
-    --hex-height: calc(var(--hex-width) / 1.73 /* sqrt(3) */);
+    --hex-height-grid: calc(var(--hex-width) / 1.73 /* sqrt(3) */);
     --hex-margin: calc(var(--hex-width) / 2);
-    --hex-border: calc(var(--hex-margin) / 1.73 /* sqrt(3) */);
+    --hex-border: 4px;
     --hex-transition: all .2s ease;
 
     --color-hex-default: #122331;
+
+    --color-cost-1: grey;
+    --color-cost-2: green;
+    --color-cost-3: aqua;
+    --color-cost-4: purple;
+    --color-cost-5: gold;
 }
 .champions-container{
     display: flex;
     width: 100%;
-    height: 500px;
+    height: auto;
     background-color: aqua;
     flex-direction: row;
     flex-wrap: wrap;
+    gap: 5px;
 }
 .img-champions{
-    height: 40px;
-    width: 40px;
+    height: 4em;
+    width: 4em;
 
+}
+
+.champions-name{
+    z-index: 2;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    font-family: auto;
+    font-weight: 700;
+    text-shadow: 1px 0 #fff, -1px 0 #fff, 0 1px #fff, 0 -1px #fff, 1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #FFF;
 }
 
 /* Hexagons */
 .hexagon-container {
     display: grid;
-    grid-template-columns: var(--hex-height) var(--hex-height) var(--hex-height) var(--hex-height) var(--hex-height) var(--hex-height) var(--hex-height);
-    grid-auto-rows: var(--hex-height);
-    grid-gap: 0px 10px;
-    padding: var(--hex-border) 0px;
+    grid-template-columns: var(--hex-width) var(--hex-width) var(--hex-width) var(--hex-width) var(--hex-width) var(--hex-width) var(--hex-width);
+    grid-auto-rows: auto;
+    grid-gap: 0px var(--hex-height);
+    padding: var(--hex-height) 0px;
+    align-items: center;
+    justify-content: center;
     }
 
 .hex{
@@ -87,4 +110,48 @@
 .hex:nth-child(27),
 .hex:nth-child(28) {
     margin-left: calc((var(--hex-height) / 2) + (var(--hex-between)/2));
+}
+
+
+.poligon {
+    display: inline-block;
+    position: relative;
+    width: 100px;
+    height: calc(100px * 1.15);
+    background: var(--color-hex-default);
+    box-sizing: border-box;
+    -webkit-clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+    clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+  }
+  .poligon1{
+    clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+    background: var(--color-hex-default);
+    display: inline-block;
+    position: relative;
+  }
+  .poligon img {
+    position: absolute;
+    top: var(--hex-border); /* equal to border thickness */
+    left: var(--hex-border); /* equal to border thickness */
+    width: calc(100% - var(--hex-border)*2) ; /* container height - (border thickness * 2) */
+    height: calc(100% - var(--hex-border)*2); /* container height - (border thickness * 2) */
+    -webkit-clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+    clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+}
+
+.poligon:nth-child(8),
+.poligon:nth-child(9),
+.poligon:nth-child(10),
+.poligon:nth-child(11),
+.poligon:nth-child(12),
+.poligon:nth-child(13),
+.poligon:nth-child(14),
+.poligon:nth-child(22),
+.poligon:nth-child(23),
+.poligon:nth-child(24),
+.poligon:nth-child(25),
+.poligon:nth-child(26),
+.poligon:nth-child(27),
+.poligon:nth-child(28) {
+    margin-left: calc(var(--hex-width) + var(--hex-border)*2);
 }
