@@ -41,10 +41,30 @@
     justify-content: center;
     display: flex;
     width: 100%;
-    height: 100%;
+    margin: 0px;
+    height: min-content;
+    transform: translateY(var(--hex-height));
     font-family: auto;
     font-weight: 700;
     text-shadow: 1px 0 #fff, -1px 0 #fff, 0 1px #fff, 0 -1px #fff, 1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #FFF;
+    user-select: none;
+}
+
+.div-Traits{
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    width: 100%;
+    height: calc(var(--hex-height) / 5);
+}
+
+.img-Traits{
+    display: flex;
+    flex-direction: row;
+    width: calc(var(--hex-height) / 5);
+    height: calc(var(--hex-height) / 5);
 }
 
 /* Hexagons */

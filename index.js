@@ -1,3 +1,5 @@
+//import {traitsObj, championsObj} from "./hola.js";
+
 /* ----Draggable Element ---- */
 function dragEvent(ev) {
   //On the Draggable Element:
@@ -37,14 +39,13 @@ function dropEvent(ev) {
   //evento cuando se suelta el click
   ev.preventDefault();
   var data = ev.dataTransfer.getData('text');
-  console.log('champNode', document.getElementById(data));
   const championNode = document.getElementById(data);
   const targetNode = ev.target;
   const DivAnterior = document.getElementById(championNode.id.split('-')[0]);
+  console.log('champNode', document.getElementById(data));
   console.log('targetNode', targetNode);
 
-  /* Within a Mouse event you can even check the status of some Keyboard-Buttons
-       such as CTRL, ALT, SHIFT. */
+  /* Check if is comming from the Champion Board y si es cierto crea una copia y pega. */
   if (championNode.dataset.fromBoard === 'true') {
     var nodeCopy = championNode.cloneNode(true);
     nodeCopy.id = targetNode.id + '-' + data; /* We cannot use the same ID */
@@ -55,11 +56,9 @@ function dropEvent(ev) {
     });
 
     targetNode.appendChild(nodeCopy);
-
-    // targetNode.appendChild(
-    //   showChampName({ champName: championNode.dataset.name, targetNode: targetNode})
-    // );
-  } else {
+  }
+  /* si viene de la mismo builder lo traslada al nuevo div */ 
+  else {
     //console.log("championNode.id.split('-')[0]", championNode.id.split('-')[0]);
 
     championNode.id = data.replace(DivAnterior.id, targetNode.id);
@@ -67,14 +66,17 @@ function dropEvent(ev) {
     console.log('targetNode.id', targetNode.id);
     targetNode.appendChild(document.getElementById(championNode.id));
     DivAnterior.style.backgroundColor = `var(--color-hex-default)`;
+    DivAnterior.textContent = "";
   }
-
   targetNode.style.background = `var(--color-cost-${championNode.dataset.cost})`;
+
 
   showChampName({
     champName: championNode.dataset.name,
     targetNode: targetNode,
   });
+
+  showTraits({champApiName:championNode.dataset.apiName , targetNode:targetNode, traits:championNode.dataset.traits})
 
   //falta hacer swap de campeones
 
@@ -88,14 +90,21 @@ function dropEvent(ev) {
 
 /* Other functions */
 
-function showSinergy({ ev, championNode }) {
-  const sinergy = document.createElement('div');
-  championNode.dataset.sinergy.forEach((element) => {
-    const divSinergyChamp = document.createElement('div');
-    const sinergyChamp = document.createElement('img');
-    console.log(element.sinergy);
+function showTraits({ champApiName, traits, targetNode }) {
+  console.log(traits)
+  const traitsDiv = document.createElement('div');
+  traits.split(",").forEach((element) => {
+    const divTraitChamp = document.createElement('div');
+    const traitChamp = document.createElement('img');
+    traitChamp.className = "img-Trait";
+    divTraitChamp.className = "div-Trait";
+    //console.log("Traits OBJ",traitsObj(element));
+    divTraitChamp.appendChild(traitChamp);
+    traitsDiv.appendChild(divTraitChamp)
+    console.log(element);
   });
-  ev.target.appendChild(sinergy);
+  targetNode.appendChild(traitsDiv);
+
   return;
 }
 
