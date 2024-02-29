@@ -1,4 +1,4 @@
-//import {traitsObj, championsObj} from "./hola.js";
+import {traitsObj, championsObj} from "./hola.js";
 
 /* ----Draggable Element ---- */
 function dragEvent(ev) {
@@ -40,7 +40,7 @@ function dropEvent(ev) {
   ev.preventDefault();
   var data = ev.dataTransfer.getData('text');
   const championNode = document.getElementById(data);
-  const targetNode = ev.target;
+  const targetNode = ev.currentTarget;
   const DivAnterior = document.getElementById(championNode.id.split('-')[0]);
   console.log('champNode', document.getElementById(data));
   console.log('targetNode', targetNode);
@@ -103,7 +103,7 @@ function showTraits({ champApiName, traits, targetNode }) {
     traitsDiv.appendChild(divTraitChamp)
     console.log(element);
   });
-  targetNode.appendChild(traitsDiv);
+  targetNode.parentNode.appendChild(traitsDiv);
 
   return;
 }
