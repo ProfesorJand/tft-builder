@@ -19,6 +19,11 @@
     --color-cost-4: purple;
     --color-cost-5: gold;
 }
+
+body{
+    width: 100%;
+    height: 100%;
+}
 .champions-container{
     display: flex;
     width: 100%;
@@ -32,6 +37,25 @@
     height: 4em;
     width: 4em;
 
+}
+
+#builderContainer{
+    display: flex;
+    width: 100%;
+    height: 50%;
+    flex-direction: row;
+    gap:10px;
+    background-color: #fdfdfd;
+    position: relative;
+}
+
+#traitsContainer{
+    display: flex;
+    width: 30%;
+    height: 100%;
+    min-height: fit-content;
+    background-color: #6f8597;
+    position: relative;
 }
 
 .champions-name{
