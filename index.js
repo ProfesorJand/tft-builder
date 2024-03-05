@@ -1,4 +1,30 @@
-import {traitsObj, championsObj} from "./hola.js";
+import champions from './champions.json' assert { type: 'json' };
+import traits from './traits.json' assert { type: 'json' };
+
+const version = '14.3';
+
+function addFunctionToPoligons() {
+  const poligonDiv = document.getElementsByClassName('poligon');
+  Array.prototype.forEach.call(poligonDiv, (elem) => {
+    elem.addEventListener('drag', dragEvent);
+    elem.addEventListener('dragstart', dragstartEvent);
+    elem.addEventListener('dragend', dragendEvent);
+    elem.addEventListener('dragover', ondragoverEvent);
+    elem.addEventListener('drop', dropEvent);
+    elem.addEventListener('dragleave', dragleaveEvent);
+    // elem.setAttribute('draggable', false);
+  });
+}
+
+addFunctionToPoligons();
+
+export function traitsObj(traitName) {
+  return traits.find((o) => o.name === traitName);
+}
+
+export function championsObj(apiName) {
+  return champions.find((o) => o.apiName === apiName);
+}
 
 /* ----Draggable Element ---- */
 function dragEvent(ev) {
@@ -11,7 +37,6 @@ function dragEvent(ev) {
 function dragstartEvent(ev) {
   //On the Draggable Element:
   //The user starts to drag an element
-  console.log('drag(event)', ev.target.id);
   ev.dataTransfer.setData('text', ev.target.id);
 }
 
@@ -19,7 +44,6 @@ function dragendEvent(ev) {
   //On the Draggable Element:
   //The user has finished dragging an element
   ev.preventDefault();
-  console.log('dragendEvent', ev.target);
   ev.target.style.opacity = '1';
   ev.target.style.backgroundColor = 'var(--color-hex-default)';
 }
@@ -40,10 +64,14 @@ function dropEvent(ev) {
   ev.preventDefault();
   var data = ev.dataTransfer.getData('text');
   const championNode = document.getElementById(data);
-  const targetNode = ev.currentTarget;
+  const targetNode = ev.target;
+  if (!targetNode.classList.contains('poligon')) {
+    console.log('no es un poligon');
+  } else {
+    console.log('Si es un poligon');
+  }
+
   const DivAnterior = document.getElementById(championNode.id.split('-')[0]);
-  console.log('champNode', document.getElementById(data));
-  console.log('targetNode', targetNode);
 
   /* Check if is comming from the Champion Board y si es cierto crea una copia y pega. */
   if (championNode.dataset.fromBoard === 'true') {
@@ -51,32 +79,34 @@ function dropEvent(ev) {
     nodeCopy.id = targetNode.id + '-' + data; /* We cannot use the same ID */
     nodeCopy.dataset.fromBoard = false;
     nodeCopy.addEventListener('dragstart', (ev) => {
-      console.log('drag(event)', ev.target.id);
       ev.dataTransfer.setData('text', ev.target.id);
     });
 
     targetNode.appendChild(nodeCopy);
-  }
-  /* si viene de la mismo builder lo traslada al nuevo div */ 
-  else {
+  } else {
+    /* si viene de la mismo builder lo traslada al nuevo div */
     //console.log("championNode.id.split('-')[0]", championNode.id.split('-')[0]);
 
     championNode.id = data.replace(DivAnterior.id, targetNode.id);
-    console.log('idDivAnterior', DivAnterior.id);
-    console.log('targetNode.id', targetNode.id);
     targetNode.appendChild(document.getElementById(championNode.id));
     DivAnterior.style.backgroundColor = `var(--color-hex-default)`;
-    DivAnterior.textContent = "";
+    DivAnterior.textContent = '';
+    DivAnterior.nextElementSibling.remove();
   }
   targetNode.style.background = `var(--color-cost-${championNode.dataset.cost})`;
-
 
   showChampName({
     champName: championNode.dataset.name,
     targetNode: targetNode,
   });
 
-  showTraits({champApiName:championNode.dataset.apiName , targetNode:targetNode, traits:championNode.dataset.traits})
+  showTraits({
+    champApiName: championNode.dataset.apiName,
+    targetNode: targetNode,
+    traits: championNode.dataset.traits,
+  });
+
+  counterTrait();
 
   //falta hacer swap de campeones
 
@@ -90,22 +120,49 @@ function dropEvent(ev) {
 
 /* Other functions */
 
-function showTraits({ champApiName, traits, targetNode }) {
-  console.log(traits)
-  const traitsDiv = document.createElement('div');
-  traits.split(",").forEach((element) => {
-    const divTraitChamp = document.createElement('div');
-    const traitChamp = document.createElement('img');
-    traitChamp.className = "img-Trait";
-    divTraitChamp.className = "div-Trait";
-    //console.log("Traits OBJ",traitsObj(element));
-    divTraitChamp.appendChild(traitChamp);
-    traitsDiv.appendChild(divTraitChamp)
-    console.log(element);
-  });
-  targetNode.parentNode.appendChild(traitsDiv);
+const trait_1 = 'https://ap.tft.tools/img/general/trait_1.png';
+const trait_2 = 'https://ap.tft.tools/img/general/trait_2.png';
+const trait_3 = 'https://ap.tft.tools/img/general/trait_3.png';
+const trait_4 = 'https://ap.tft.tools/img/general/trait_4.png';
 
+function showTraits({ champApiName, traits, targetNode }) {
+  console.log(traits);
+  const traitsDiv = document.createElement('div');
+  traits.split(',').forEach((element) => {
+    const divBorderChampTrait = document.createElement('div');
+    divBorderChampTrait.className = 'divBorderChampTrait';
+    const traitChampImg = document.createElement('img');
+    const borderTrait = document.createElement('img');
+    traitChampImg.className = 'img-Trait';
+    borderTrait.className = 'img-BorderTrait';
+    const objTraits = traitsObj(element);
+    const url = `https://raw.communitydragon.org/${version}/game/`;
+    traitChampImg.src =
+      url +
+      objTraits.icon
+        .toLocaleLowerCase()
+        .replace('.dds', '.png')
+        .replace('.tex', '.png');
+    borderTrait.src = trait_1;
+
+    //console.log("Traits OBJ",traitsObj(element));
+    divBorderChampTrait.appendChild(borderTrait);
+    divBorderChampTrait.appendChild(traitChampImg);
+    traitsDiv.appendChild(divBorderChampTrait);
+  });
+  traitsDiv.className = 'div-Trait';
+  targetNode.parentNode.appendChild(traitsDiv);
   return;
+}
+
+function counterTrait() {
+  const poligon = document.getElementsByClassName('poligon');
+  const children = poligon[3].children[0];
+  console.log(children);
+  Array.prototype.forEach.call(poligon, function (hex) {
+    // Do stuff here
+    console.log('hex.children', hex);
+  });
 }
 
 function showChampName({ champName, targetNode }) {
