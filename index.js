@@ -1,7 +1,8 @@
 import champions from './champions.json' assert { type: 'json' };
 import traits from './traits.json' assert { type: 'json' };
+import { version, urlDdragon } from './communitydragon.js';
 
-const version = '14.3';
+let TRAITS = {};
 
 function addFunctionToPoligons() {
   const poligonDiv = document.getElementsByClassName('poligon');
@@ -136,9 +137,8 @@ function showTraits({ champApiName, traits, targetNode }) {
     traitChampImg.className = 'img-Trait';
     borderTrait.className = 'img-BorderTrait';
     const objTraits = traitsObj(element);
-    const url = `https://raw.communitydragon.org/${version}/game/`;
     traitChampImg.src =
-      url +
+      urlDdragon +
       objTraits.icon
         .toLocaleLowerCase()
         .replace('.dds', '.png')
@@ -149,20 +149,16 @@ function showTraits({ champApiName, traits, targetNode }) {
     divBorderChampTrait.appendChild(borderTrait);
     divBorderChampTrait.appendChild(traitChampImg);
     traitsDiv.appendChild(divBorderChampTrait);
+    TRAITS[element] = { ...objTraits, counter: (TRAITS[element] || 0) + 1 };
   });
   traitsDiv.className = 'div-Trait';
   targetNode.parentNode.appendChild(traitsDiv);
+
   return;
 }
 
 function counterTrait() {
-  const poligon = document.getElementsByClassName('poligon');
-  const children = poligon[3].children[0];
-  console.log(children);
-  Array.prototype.forEach.call(poligon, function (hex) {
-    // Do stuff here
-    console.log('hex.children', hex);
-  });
+  console.log(TRAITS);
 }
 
 function showChampName({ champName, targetNode }) {

@@ -1,11 +1,11 @@
 import champions from './champions.json' assert { type: 'json' };
+import { version, urlDdragon } from './communitydragon.js';
 
 async function showChampions() {
   const championsContainer = document.getElementById('championsContainer');
   // console.log(championsContainer);
   // console.log('hola');
-  const version = '14.3';
-  const urlDdragon = `https://raw.communitydragon.org/${version}/game/`;
+
   const url = 'https://backend-profesorjand.onrender.com/tft/champions';
   try {
     // const champions = await fetch(url)
@@ -21,10 +21,12 @@ async function showChampions() {
           urlDdragon +
           (
             squareIcon
-              .replace('Splashes/', 'Splashes/patching/')
-              .replace('_Mobile.', '_mobile_small.') || tileIcon
+              .toLowerCase()
+              .replace('splashes/', 'splashes/patching/')
+              .replace('_mobile.', '_teamplanner_splash.')
+              .replace('_square.', '_splash_tile_1_small.tft_set11.')
+              .replace('.tft_set11', '') || tileIcon
           )
-            .toLowerCase()
             .replace('.dds', '.png')
             .replace('tex', 'png');
         imagenElem.src = src;
