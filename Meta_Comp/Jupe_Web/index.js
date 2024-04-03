@@ -7,6 +7,8 @@ function infoComp({ element, padreComposicion }) {
   infoComp.id = `composicion-${element.titulo.replaceAll(' ', '_')}`;
   infoComp.style.display = 'none';
   padreComposicion.appendChild(infoComp);
+  titulo({ titulo: element.titulo, padre: infoComp });
+  sinergias({ sinergias: element.sinergias, padre: infoComp });
   composicion({ element, padre: infoComp });
 }
 
@@ -62,6 +64,22 @@ function composicion({ element, padre }) {
   });
 }
 
+function titulo({ titulo, padre }) {
+  const h3 = document.createElement('h3');
+  h3.className = 'titulo';
+  h3.innerHTML = titulo;
+  padre.appendChild(h3);
+}
+
+function sinergias({ sinergias, padre }) {
+  const p = document.createElement('p');
+  p.className = 'sinergiasText';
+  sinergias.forEach((sinergia) => {
+    p.innerHTML += `${sinergia.nombre} (${sinergia.cantidadMinima}) `;
+  });
+  padre.appendChild(p);
+}
+
 function pestañas({ pestañas, id, padre }) {
   const div = document.createElement('div');
   div.id = `pestaña-${id}`;
@@ -82,14 +100,28 @@ function pestañas({ pestañas, id, padre }) {
         arrayAumentos: pestañas.aumentos,
         padre: pestañaConteinerContenido,
       });
-      /*
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      */
     }
     if (key === 'consejos' || key === 'tips') {
       pestañaConteinerContenido.innerHTML = value;
+    }
+    if (key === 'gameplay') {
+      function getId(url) {
+        const regExp =
+          /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
+        const match = url.match(regExp);
+
+        return match && match[2].length === 11 ? match[2] : null;
+      }
+
+      const videoId = getId(value);
+      const iframeMarkup =
+        '<iframe width="560" height="315" src="//www.youtube.com/embed/' +
+        videoId +
+        '" frameborder="0" allowfullscreen></iframe>';
+      const divIframe = document.createElement('div');
+      divIframe.className = 'divIframe';
+      divIframe.innerHTML = iframeMarkup;
+      pestañaConteinerContenido.appendChild(divIframe);
     }
     div.appendChild(pestañaConteinerContenido);
     li.addEventListener('click', (e) => {

@@ -13,10 +13,16 @@
           "TFT7_Augment_LuckyGloves"
         ],
         "tips": "Tips Lorem Ipsum",
-        "consejos": "Consejos Lorem Ipsum"
+        "consejos": "Consejos Lorem Ipsum",
+        "gameplay": "https://www.youtube.com/watch?v=0wxRqoHL0XA"
       },
 
       "sinergias": [
+        {
+          "nombre": "Nombre Sinergia",
+          "cantidadMinima": 2,
+          "cantidadMaxima": 3
+        },
         {
           "nombre": "Nombre Sinergia",
           "cantidadMinima": 2,
@@ -50,8 +56,21 @@
       "pestañas": {
         "aumentos": ["TFT7_Augment_LuckyGloves", "TFT6_Augment_Traitless1"],
         "tips": "Tips Lorem Ipsum",
-        "consejos": "Consejos Lorem Ipsum"
+        "consejos": "Consejos Lorem Ipsum",
+        "gameplay": "https://www.youtube.com/watch?v=I2sB3mVP7Y0"
       },
+      "sinergias": [
+        {
+          "nombre": "Nombre Sinergia",
+          "cantidadMinima": 2,
+          "cantidadMaxima": 3
+        },
+        {
+          "nombre": "Nombre Sinergia",
+          "cantidadMinima": 2,
+          "cantidadMaxima": 3
+        }
+      ],
       "planDeJuego": [
         {
           "titulo": "titulo1",
@@ -76,8 +95,21 @@
       "pestañas": {
         "aumentos": ["TFT6_Augment_Traitless1"],
         "tips": "Tips de Otro",
-        "consejos": "Consejos de Otro"
-      }
+        "consejos": "Consejos de Otro",
+        "gameplay": "https://www.youtube.com/watch?v=8qIEMAXlNUM"
+      },
+      "sinergias": [
+        {
+          "nombre": "Nombre Sinergia",
+          "cantidadMinima": 2,
+          "cantidadMaxima": 3
+        },
+        {
+          "nombre": "Nombre Sinergia",
+          "cantidadMinima": 2,
+          "cantidadMaxima": 3
+        }
+      ]
     }
   ]
 }

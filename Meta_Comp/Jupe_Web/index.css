@@ -65,6 +65,24 @@ body{
   margin: 0 10px;
 }
 
+.titulo{
+  color: white;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  font-size: xx-large;
+}
+
+.sinergiasText{
+  color: white;
+  display: flex;
+  position:relative;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0px;
+}
+
 .containerPestañas{
   display: flex;
   flex-direction: row;
@@ -136,4 +154,16 @@ body{
 
 .tooltip:hover .containerTooltip {
   visibility: visible;
+}
+
+.divIframe{
+  width: 80%;
+  display: flex;
+  position: relative;
+  aspect-ratio: 16 / 9;
+}
+
+iframe{
+  width: 100%;
+  height: 100%;
 }
