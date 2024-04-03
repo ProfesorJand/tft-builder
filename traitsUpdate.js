@@ -1,14 +1,15 @@
 const fs = require('fs');
-const { version, urlDdragon } = require('./communitydragon.js');
+const version = 'pbe';
 
-async function getChampionsUpdates(urlDdragon) {
+const url = `https://raw.communitydragon.org/${version}/cdragon/tft/es_ar.json`;
+async function getTraitsUpdates(url) {
   try {
-    const data = await fetch(urlDdragon)
+    const data = await fetch(url)
       .then((resp) => resp.json())
       .then((data) => {
         fs.writeFile(
-          'champions.json',
-          JSON.stringify(data.sets['11'].champions),
+          'traits.json',
+          JSON.stringify(data.sets['11'].traits),
           (err) => {
             if (err) {
               throw new Error('Something went wrong.');
@@ -22,4 +23,4 @@ async function getChampionsUpdates(urlDdragon) {
   }
 }
 
-getChampionsUpdates(urlDdragon);
+getTraitsUpdates(url);
