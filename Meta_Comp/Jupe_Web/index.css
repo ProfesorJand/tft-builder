@@ -1,5 +1,15 @@
+:root{
+  --color-background-1:#130359;
+  --color-background-2: #1E197F;
+  --color-font: white;
+  --color-pestaña: #1E197F;
+  --color-pestaña-hover: #120d69;
+  --color-pestaña-activo: #120d69;
+  --color-background-tooltip: black;
+}
+
 body{
-  background-color: rgb(226, 226, 226);
+  background-color: var(--color-background-2);
   display:flex;
   flex-direction: column;
   position:relative;
@@ -8,7 +18,7 @@ body{
 }
 
 #containerTierList{
-  background-color: black;
+  background-color: var(--color-background-2);
   display: flex;
   flex-direction: column;
   position: relative;
@@ -66,7 +76,7 @@ body{
 }
 
 .titulo{
-  color: white;
+  color: var(--color-font);
   display: flex;
   position: relative;
   align-items: center;
@@ -75,7 +85,7 @@ body{
 }
 
 .sinergiasText{
-  color: white;
+  color: var(--color-font);
   display: flex;
   position:relative;
   align-items: center;
@@ -88,7 +98,7 @@ body{
   flex-direction: row;
   position:relative;
   gap:10px;
-  color:white;
+  color:var(--color-font);
   align-items: center;
   justify-content: center;
   margin: 10px auto 0px auto;
@@ -96,23 +106,23 @@ body{
 
 .pestañas{
   list-style:none;
-  background-color: rgb(35, 35, 99);
+  background-color: var(--color-pestaña);
   width: max-content;
   min-width: 50px;
   padding: 10px;
 }
 
 .active{
-  background-color: rgb(35, 145, 31);
+  background-color: var(--color-pestaña-activo);
 }
 
 .pestañas:hover{
-  background-color: rgb(20, 70, 18);
+  background-color: var(--color-pestaña-hover);
 }
 
 .pestañaConteinerContenido{
-  color:white;
-  background-color:  rgb(35, 145, 31);
+  color:var(--color-font);
+  background-color:  var(--color-pestaña-activo);
   position: relative;
   align-items: center;
   justify-content: center;
@@ -125,12 +135,12 @@ body{
 
 .containerTooltip{
   margin-left: -150px;
-  top: 100%;
+  bottom: 100%;
   left: 50%;
   visibility: hidden;
   width: 300px;
-  background-color: black;
-  color: #fff;
+  background-color: var(--color-background-tooltip);
+  color: var(--color-font);
   text-align: center;
   border-radius: 3px;
   padding: 6px 6px;
