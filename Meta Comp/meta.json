@@ -1,0 +1,55 @@
+{
+  "S": [
+    {
+      "titulo": "Fast 9 Legendarias",
+      "imgTitular": "https://guiadeparche.com/tftdata/Set11/campeones/tft11_hwei_mobile.tft_set11.png",
+      "campeonesComp": "https://guiadeparche.com/wp-content/uploads/2024/03/Fast-9-Legendarias-AD.png",
+      "earlyComp": "https://guiadeparche.com/tftdata/Set11/campeones/tft11_malphite.tft_set11.png",
+      "carrusel": "https://guiadeparche.com/tftdata/Set11/campeones/tft11_malphite.tft_set11.png",
+      "posicionamiento": "https://guiadeparche.com/wp-content/uploads/2024/03/Fast-9-Legendarias-AD.png",
+      "aumentos": [
+        "TFT7_Augment_LuckyGloves",
+        "TFT6_Augment_Traitless1",
+        "TFT7_Augment_LuckyGloves",
+        "TFT7_Augment_LuckyGloves"
+      ],
+      "planDeJuego": [
+        {
+          "titulo": "titulo1",
+          "texto": "Texto Lore Ipsum"
+        },
+        {
+          "titulo": "titulo2",
+          "texto": "Texto Lore Ipsum2"
+        },
+        {
+          "titulo": "titulo3",
+          "texto": "Texto Lore Ipsum3"
+        }
+      ]
+    },
+    {
+      "titulo": "Fantasmales",
+      "imgTitular": "https://guiadeparche.com/tftdata/Set11/campeones/tft11_aatrox_square.tft_set11.png",
+      "campeonesComp": "https://guiadeparche.com/tftdata/Set11/campeones/tft11_aatrox.tft_set11.png",
+      "earlyComp": "https://guiadeparche.com/tftdata/Set11/campeones/tft11_aatrox.tft_set11.png",
+      "carrusel": "https://guiadeparche.com/tftdata/Set11/campeones/tft11_aatrox.tft_set11.png",
+      "posicionamiento": "https://guiadeparche.com/wp-content/uploads/2024/03/Fast-9-Legendarias-AD.png",
+      "aumentos": ["TFT7_Augment_LuckyGloves", "TFT6_Augment_Traitless1"],
+      "planDeJuego": [
+        {
+          "titulo": "titulo1",
+          "texto": "Texto Lore Ipsum"
+        },
+        {
+          "titulo": "titulo2",
+          "texto": "Texto Lore Ipsum2"
+        },
+        {
+          "titulo": "titulo3",
+          "texto": "Texto Lore Ipsum3"
+        }
+      ]
+    }
+  ]
+}

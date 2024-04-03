@@ -1,0 +1,83 @@
+{
+  "S": [
+    {
+      "id": "Fast_9_Legendarias",
+      "titulo": "Fast 9 Legendarias",
+      "imgTitular": "https://guiadeparche.com/tftdata/Set11/campeones/tft11_hwei_mobile.tft_set11.png",
+      "composicion": "https://guiadeparche.com/wp-content/uploads/2024/03/Fast-9-Legendarias-AD.png",
+      "pestañas": {
+        "aumentos": [
+          "TFT7_Augment_LuckyGloves",
+          "TFT6_Augment_Traitless1",
+          "TFT7_Augment_LuckyGloves",
+          "TFT7_Augment_LuckyGloves"
+        ],
+        "tips": "Tips Lorem Ipsum",
+        "consejos": "Consejos Lorem Ipsum"
+      },
+
+      "sinergias": [
+        {
+          "nombre": "Nombre Sinergia",
+          "cantidadMinima": 2,
+          "cantidadMaxima": 3
+        }
+      ],
+
+      "planDeJuego": [
+        {
+          "titulo": "titulo1",
+          "texto": "Texto Lore Ipsum"
+        },
+        {
+          "titulo": "titulo2",
+          "texto": "Texto Lore Ipsum2"
+        },
+        {
+          "titulo": "titulo3",
+          "texto": "Texto Lore Ipsum3"
+        }
+      ]
+    },
+    {
+      "id": "Fantasmales",
+      "titulo": "Fantasmales",
+      "imgTitular": "https://guiadeparche.com/tftdata/Set11/campeones/tft11_aatrox_square.tft_set11.png",
+      "campeonesComp": "https://guiadeparche.com/tftdata/Set11/campeones/tft11_aatrox.tft_set11.png",
+      "earlyComp": "https://guiadeparche.com/tftdata/Set11/campeones/tft11_aatrox.tft_set11.png",
+      "carrusel": "https://guiadeparche.com/tftdata/Set11/campeones/tft11_aatrox.tft_set11.png",
+      "composicion": "https://guiadeparche.com/wp-content/uploads/2024/03/Annie-Miticos-Invoker.png",
+      "pestañas": {
+        "aumentos": ["TFT7_Augment_LuckyGloves", "TFT6_Augment_Traitless1"],
+        "tips": "Tips Lorem Ipsum",
+        "consejos": "Consejos Lorem Ipsum"
+      },
+      "planDeJuego": [
+        {
+          "titulo": "titulo1",
+          "texto": "Texto Lore Ipsum"
+        },
+        {
+          "titulo": "titulo2",
+          "texto": "Texto Lore Ipsum2"
+        },
+        {
+          "titulo": "titulo3",
+          "texto": "Texto Lore Ipsum3"
+        }
+      ]
+    }
+  ],
+  "A": [
+    {
+      "titulo": "Otro",
+      "composicion": "https://guiadeparche.com/wp-content/uploads/2024/03/Annie-Miticos-Invoker.png",
+      "imgTitular": "https://guiadeparche.com/tftdata/Set11/campeones/tft11_aatrox_square.tft_set11.png",
+      "pestañas": {
+        "aumentos": ["TFT6_Augment_Traitless1"],
+        "tips": "Tips de Otro",
+        "consejos": "Consejos de Otro"
+      }
+    }
+  ]
+}

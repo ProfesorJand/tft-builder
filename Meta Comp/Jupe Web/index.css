@@ -1,0 +1,132 @@
+body{
+  background-color: rgb(226, 226, 226);
+  display:flex;
+  flex-direction: column;
+  position:relative;
+  width: 100%;
+  font-size: 20px;
+}
+
+#containerTierList{
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  gap:5px
+}
+
+.container-Tier{
+  background-color: brown;
+  display: flex;
+  position:relative;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  width: 100%;
+  border: 1px solid black
+}
+
+.Tier{
+  margin: 0 20px;
+  min-width: 50px;
+  max-width: 100px;
+  font-weight: 600;
+  font-size: xx-large;
+}
+
+.infoComp{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.composicionImg{
+  width: 100%;
+}
+
+.composicionDiv{
+  display: flex;
+  position: relative;
+  width: 80%;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.container-ChampionsTierList{
+  display: flex;
+  position:relative;
+}
+
+.imgChampionTierList{
+  width: 100px;
+  height: 100px;
+  margin: 0 10px;
+}
+
+.containerPestañas{
+  display: flex;
+  flex-direction: row;
+  position:relative;
+  gap:10px;
+  color:white;
+  align-items: center;
+  justify-content: center;
+  margin: 10px auto 0px auto;
+}
+
+.pestañas{
+  list-style:none;
+  background-color: rgb(35, 35, 99);
+  width: max-content;
+  min-width: 50px;
+  padding: 10px;
+}
+
+.active{
+  background-color: rgb(35, 145, 31);
+}
+
+.pestañas:hover{
+  background-color: rgb(20, 70, 18);
+}
+
+.pestañaConteinerContenido{
+  color:white;
+  background-color:  rgb(35, 145, 31);;
+}
+
+.show{
+  display: flex;
+}
+
+.containerTooltip{
+  margin-left: -150px;
+  top: 100%;
+  left: 50%;
+  visibility: hidden;
+  width: 300px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 3px;
+  padding: 6px 6px;
+  position: absolute;
+  z-index: 50;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.tooltip{
+  width: calc(100% / 8);
+  display: flex;
+}
+
+.aumentoImg{
+  width: 100px;
+  height: auto;
+}
+
+.tooltip:hover .containerTooltip {
+  visibility: visible;
+}
