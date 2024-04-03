@@ -94,7 +94,11 @@ body{
 
 .pestañaConteinerContenido{
   color:white;
-  background-color:  rgb(35, 145, 31);;
+  background-color:  rgb(35, 145, 31);
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0px;
 }
 
 .show{
@@ -118,8 +122,11 @@ body{
 }
 
 .tooltip{
-  width: calc(100% / 8);
   display: flex;
+  position:relative;
+  width: calc(100% / 8);
+  align-items: center;
+  justify-content: center;
 }
 
 .aumentoImg{
