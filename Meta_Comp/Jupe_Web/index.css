@@ -1,24 +1,33 @@
 :root{
-  --color-background-1:#130359;
+  /* --color-background-1:#130359;
   --color-background-2: #1E197F;
   --color-font: white;
   --color-pestaña: #1E197F;
   --color-pestaña-hover: #120d69;
   --color-pestaña-activo: #120d69;
-  --color-background-tooltip: black;
+  --color-background-tooltip: black; */
+  font-family: "Roboto", Sans-serif;
+  user-select: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  position: relative;
 }
 
-body{
-  background-color: var(--color-background-2);
+
+
+html, body{
+  background-color: #1E197F;
   display:flex;
   flex-direction: column;
   position:relative;
   width: 100%;
   font-size: 20px;
+  margin: 0px;
 }
 
 #containerTierList{
-  background-color: var(--color-background-2);
+  background-color: #1E197F;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -27,31 +36,80 @@ body{
 }
 
 .container-Tier{
-  background-color: brown;
   display: flex;
-  position:relative;
-  flex-direction: row;
-  align-items: center;
-  justify-content: start;
-  width: 100%;
-  border: 1px solid black
+    position: relative;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    width: 100%;
+    min-height: 60px;
+    /* max-height: 120px; */
+    /* height: auto;*/
 }
 
 .Tier{
-  margin: 0 20px;
-  min-width: 50px;
-  max-width: 100px;
-  font-weight: 600;
-  font-size: xx-large;
+  margin: 0;
+    /* min-width: 55px; */
+    /* min-height: 55px; */
+    /* max-width: 120px; */
+    /* max-height: 120px; */
+    font-weight: 600;
+    font-size: xx-large;
+    width: 20%;
+    /* height: 120px; */
+    display: block;
+}
+
+.imgTier{
+  display: flex;
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.imgChampionTierList{
+  /* padding: 0px; */
+  width: 25%;
+  height: auto;
+  box-sizing: border-box;
+  /* height: calc(100% / 6); */
+  /* max-width: 95px; */
+  /* max-height: 200px; */
+  /* min-width: 55px; */
+  /* min-height: 55px; */
+  transition: .5s;
+  transform: scale(0.9);
+
+}
+
+.imgChampionTierList:hover{
+  cursor:pointer;
+  transform: scale(1);
+  
+  /*
+  outline: 4px solid grey;
+  outline-offset: -4px; */
+}
+
+.imgSelected{
+  filter: grayscale(0%);
+  -webkit-filter: grayscale(0%);
+  transform: scale(1);
+  transition: .5s;
+  /* outline: 4px solid white;
+  outline-offset: -4px; */
 }
 
 .infoComp{
   display: flex;
   flex-direction: column;
   position: relative;
+  gap: 5px;
 }
 
 .composicionImg{
+  display:flex;
+  position: relative;
   width: 100%;
 }
 
@@ -66,67 +124,98 @@ body{
 
 .container-ChampionsTierList{
   display: flex;
-  position:relative;
-}
-
-.imgChampionTierList{
-  width: 100px;
-  height: 100px;
-  margin: 0 10px;
+  position: relative;
+  width: 100%;
+  /* gap: 5px; */
+  /* margin-left: 5px; */
+  box-sizing: border-box;
+  align-items: center;
+  /* height: 200px; */
 }
 
 .titulo{
-  color: var(--color-font);
+  color: white;
   display: flex;
   position: relative;
   align-items: center;
   justify-content: center;
   font-size: xx-large;
+  margin:0;
+  padding:0;
+  text-align: center;
 }
 
 .sinergiasText{
-  color: var(--color-font);
+  color: white;
   display: flex;
-  position:relative;
-  align-items: center;
-  justify-content: center;
-  margin-top: 0px;
-}
-
-.containerPestañas{
-  display: flex;
-  flex-direction: row;
-  position:relative;
-  gap:10px;
-  color:var(--color-font);
-  align-items: center;
-  justify-content: center;
-  margin: 10px auto 0px auto;
-}
-
-.pestañas{
-  list-style:none;
-  background-color: var(--color-pestaña);
-  width: max-content;
-  min-width: 50px;
-  padding: 10px;
-}
-
-.active{
-  background-color: var(--color-pestaña-activo);
-}
-
-.pestañas:hover{
-  background-color: var(--color-pestaña-hover);
-}
-
-.pestañaConteinerContenido{
-  color:var(--color-font);
-  background-color:  var(--color-pestaña-activo);
   position: relative;
   align-items: center;
   justify-content: center;
-  padding: 20px 0px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.containerPestanas{
+  display: flex;
+    flex-direction: row;
+    position: relative;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+    width: 100%;
+    margin: 0;
+    padding: 0 15px;
+    box-sizing: border-box;
+    gap: 5px;
+}
+
+.pestanas{
+  list-style: none;
+    background-color: #1E197F;
+    width: max-content;
+    /* min-width: 200px; */
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    border: 2px solid grey;
+    /* padding: 5px; */
+}
+
+.pestanas:hover{
+  cursor: pointer;
+  background-color: #120d69;
+}
+
+.active{
+  background-color: #120d69;
+  border-bottom-color:  #120d69;
+}
+
+.pestanaConteiner{
+  display: flex;
+  position: relative;
+  width: 100%;
+  margin-top: -5px;
+}
+
+.pestanaConteinerContenido{
+  color: white;
+  background-color:  #120d69;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 20px;
+  display: flex;
+  width: 100%;
+  gap:5px;
+}
+
+.imgCompPestana{
+  width: 100%;
 }
 
 .show{
@@ -139,26 +228,27 @@ body{
   left: 50%;
   visibility: hidden;
   width: 300px;
-  background-color: var(--color-background-tooltip);
-  color: var(--color-font);
+  background-color: black;
+  color: white;
   text-align: center;
   border-radius: 3px;
   padding: 6px 6px;
   position: absolute;
   z-index: 50;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
 }
 
 .tooltip{
   display: flex;
   position:relative;
-  width: calc(100% / 8);
+  width: 10%;
   align-items: center;
   justify-content: center;
 }
 
 .aumentoImg{
-  width: 100px;
+  width: 100%;
   height: auto;
 }
 
@@ -176,4 +266,73 @@ body{
 iframe{
   width: 100%;
   height: 100%;
+}
+
+.btnClose{
+  display: flex;
+  position:relative;
+  width: 20px;
+  height: auto;
+  text-align: center;
+  margin: 0;
+  top:0;
+  left:0;
+  background-color: aliceblue;
+  border: 1px solid black;
+  padding: 0px 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+}
+
+.btnClose:hover{
+  background-color: #120d69;
+  color:white;
+  border-color: white;
+}
+
+@media only screen and (max-width: 900px) {
+  .containerTooltip{
+    width: 100%;
+    left: 0;
+    margin-left: 0;
+  }
+  .tooltip{
+    position: initial;
+    width: 12.5%;
+  }
+  .containerPestanas{
+    width: 100%;
+    gap: 5px;
+    flex-wrap: nowrap;
+    overflow: scroll;
+    justify-content: flex-start;
+  }
+
+  .pestanaConteinerContenido{
+    font-size: small;
+  }
+
+  .pestanas{
+    padding: 5px;
+    font-size: small;
+  }
+
+  .composicionDiv{
+    width: 100%;
+  }
+
+  .titulo{
+    font-size: larger;
+  }
+
+  .sinergiasText{
+    font-size: small;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 0 20px;
+    display: block;
+  }
 }

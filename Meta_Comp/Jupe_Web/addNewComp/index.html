@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./index.css">
+  <title>Añadir una Comp Nueva</title>
+</head>
+<body>
+  <form id="formCrearComp">
+    <fieldset>
+      <legend>Tier de la Comp:</legend>
+      <input list="selectTiers" name="selectTier" id="selectTier">
+      <datalist id="selectTiers" name="selectTiers">
+        <option value="S">
+        <option value="A">
+        <option value="B">
+        <option value="Meme">
+      </datalist>
+    </fieldset><br>
+
+    <fieldset>
+      <legend>Titulo de la Comp:</legend>
+      <input id="FormTituloComp" type="text" value="" placeholder="texto..." required>
+    </fieldset><br>
+
+     <fieldset>
+      <legend>Imagen Titular de la Comp (Champion):</legend>
+      <input id="FormImgTitular" type="text" value="" placeholder="URL..." required>
+     </fieldset><br>
+     <fieldset>
+      <legend>Imagen de la Comp Final:</legend>
+      <input id="FormImgComp" type="text" value="" placeholder="URL..." required>
+     </fieldset><br>
+     <fieldset>
+      <legend>Sinergias de la Comp final:</legend>
+      <input id="FormSinergias" type="text" value="" placeholder="texto..." style="width:100%;box-sizing:border-box;" required>
+    </fieldset><br>
+    <fieldset>
+        <legend>Aumentos:</legend>
+      <input list="selectAumentos" name="selectAumento" id="selectAumento">
+      <datalist id="selectAumentos" name="selectAumentos">
+      </datalist>
+      <input id="btnAumentos" type="button" value="Agregar Aumentos">
+    </fieldset><br>
+    <fieldset for="FormPestañas">
+      <legend>Pestañas:</legend>
+      <label for="">
+        Consejos
+        <br>
+        <textarea type="" value=""> </textarea>
+      </label><br>
+      <label for="">
+        Tips
+        <br>
+        <textarea type="" value=""> </textarea>
+      </label>
+    </fieldset><br>
+    <fieldset>
+      <legend>Pestañas Composiciones:</legend>
+      <select id="selectOption" name="selectOption">
+        <option value="Consejos">Consejos</option>
+        <option value="Tips">Tips</option>
+        <option value="Composiciones">Composiciones</option>
+      </select>
+      <label for="">
+        <input id="FormPestañaInfo" type="text" value="">
+      </label>
+      <input id="btnPestañas" type="button" value="Agregar">
+    </fieldset><br>
+    <input type="submit" value="Crear Comp"></input> 
+  </form>
+  <div id="Previsualizacion">
+    <h1 id="Tier"></h1>
+    <h1 id="TituloComp"></h1>
+    <img id="ImgTitular" src="" alt="">
+    <h2 id="Sinergias"></h2>
+    <img id="ImgComp" src="" alt="">
+    <div id="DivPestañasAumento">
+    </div>
+    <div id="DivPestañas">
+      <ul id="ulPestañas">
+      </ul>
+    </div>
+  </div>
+  <script type="module" src="./index.js"></script>
+</body>
+</html>

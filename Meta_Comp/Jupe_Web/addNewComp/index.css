@@ -1,0 +1,20 @@
+#formCrearComp{
+  width: 50%;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  margin: 0 auto;
+
+}
+input[type=text]{
+  width:100%;
+  box-sizing:border-box;
+}
+
+textarea{
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  resize:vertical ;
+  min-height: 200px;
+}
