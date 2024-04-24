@@ -1,11 +1,23 @@
-//import meta from './meta.json' with { type: 'json' };
-//import datosSet11Latino from './datosSet11Latino.json' with { type: 'json' };
+let meta = [];
+let datosSet11Latino = {};
 
-const fetchMeta = await fetch('./meta.json');
-const meta = await fetchMeta.json();
+var metahttp = new XMLHttpRequest();
+metahttp.onreadystatechange = function () {
+  if (this.readyState == 4 && this.status == 200) {
+    meta = JSON.parse(this.responseText);
+  }
+};
+metahttp.open('GET', './meta.json', false);
+metahttp.send();
 
-const fetchDatosSet11Latino = await fetch('./datosSet11Latino.json');
-const datosSet11Latino = await fetchDatosSet11Latino.json();
+var datosSet11Latinohttp = new XMLHttpRequest();
+datosSet11Latinohttp.onreadystatechange = function () {
+  if (this.readyState == 4 && this.status == 200) {
+    datosSet11Latino = JSON.parse(this.responseText);
+  }
+};
+datosSet11Latinohttp.open('GET', './datosSet11Latino.json', false);
+datosSet11Latinohttp.send();
 
 function closeComp({ padre }) {
   const btn = document.createElement('btn');
@@ -74,7 +86,6 @@ function imgTitular({ element, padreImg }) {
             'pestanaConteinerContenido'
           );
           for (var i = 0; i < pestañaAumento.length; i++) {
-            console.log(pestañaAumento[i], i);
             if (i === 0) {
               pestañaAumento[i].style.display = 'flex';
             } else {
@@ -112,8 +123,10 @@ function titulo({ titulo, padre }) {
 function sinergias({ sinergias, padre }) {
   const p = document.createElement('p');
   p.className = 'sinergiasText';
-  p.innerHTML = sinergias;
-
+  const span = document.createElement('span');
+  span.className = 'sinergiasSpan';
+  span.innerHTML = sinergias;
+  p.appendChild(span);
   padre.appendChild(p);
 }
 
@@ -246,7 +259,6 @@ function aumentos({ arrayAumentos, padre }) {
 
 const containerTierList = document.getElementById('containerTierList');
 for (const key in meta) {
-  console.log(key);
   const containerTierType = document.createElement('div');
   containerTierType.className = `container-Tier`;
   const divTier = document.createElement('div');
@@ -286,6 +298,7 @@ const pestanaConteinerPrincipal =
 pestanaConteinerPrincipal[0].getElementsByClassName(
   'pestanaConteinerContenido'
 )[0].style.display = 'flex';
+
 document
   .getElementById('containerChampionsTierS')
   .getElementsByClassName('imgChampionTierList')[0]

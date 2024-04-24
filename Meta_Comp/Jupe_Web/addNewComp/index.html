@@ -7,6 +7,15 @@
   <title>Añadir una Comp Nueva</title>
 </head>
 <body>
+  <fieldset>
+    <legend> Elige tus opciones</legend>
+    <input type="button" value="Crear una nueva Composicion" id="crearNuevaCompBtn">
+    <input type="button" value="Modificar una Composiciones" id="modificarCompBtn">
+    <input list="selectComps" name="selectComp" id="selectComp">
+    <datalist id="selectComps" name="selectComps">
+    </datalist>
+  </fieldset>
+  
   <form id="formCrearComp">
     <fieldset>
       <legend>Tier de la Comp:</legend>
@@ -16,7 +25,10 @@
         <option value="A">
         <option value="B">
         <option value="Meme">
-      </datalist>
+      </datalist><br>
+      <label for="">Posicionamiento  
+        <input type="number" max="5" min="1" >
+      </label>
     </fieldset><br>
 
     <fieldset>
@@ -48,12 +60,12 @@
       <label for="">
         Consejos
         <br>
-        <textarea type="" value=""> </textarea>
+        <textarea id="formConsejos" type="" value=""> </textarea>
       </label><br>
       <label for="">
         Tips
         <br>
-        <textarea type="" value=""> </textarea>
+        <textarea id="formTips"type="" value=""> </textarea>
       </label>
     </fieldset><br>
     <fieldset>
@@ -83,6 +95,7 @@
       </ul>
     </div>
   </div>
+  <!-- <script type="module" src="./changeMetaJson.js" defer></script> -->
   <script type="module" src="./index.js"></script>
 </body>
 </html>

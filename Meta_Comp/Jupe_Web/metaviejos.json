@@ -1,0 +1,161 @@
+[
+  {
+    "titulo": "Celestiales Yone 3",
+    "composicion": "https://guiadeparche.com/tftdata/Set11/metaComps/composiciones/Yone-Celestiales-Segadores.png",
+    "imgTitular": "https://guiadeparche.com/tftdata/Set11/metaComps/campeones_bordes/yone-celestial-3.jpg",
+    "pestañas": {
+      "Aumentos": [
+        "TFT9_Augment_SupportCache",
+        "TFT9_Augment_Harmacist1",
+        "TFT9_Augment_GargantuanResolve",
+        "TFT10_Augment_SilverVeil",
+        "TFT9_Augment_NotToday",
+        "TFT6_Augment_RadiantRelics",
+        "TFT9_Augment_Harmacist3",
+        "TFT10_Augment_InspiringEpitaph"
+      ],
+      "Tips": [
+        "Play all the celestials and ideally also the celestial emblem with spatula and negatron cloak.",
+        "Then look to play the 4 reapers.",
+        "Focus on giving Yone Titan's Resolve and Hand of Justice or BT; The 3rd item can be quicksilver or Guinsoo Quickly go up to Level 7 to find 3-star Yone and 3-star."
+      ],
+      "Consejos": [
+        "Juega todos los celestiales e idealmente también el emblema de celestiales con espátula y capa de negatrones.",
+        "Luego busca jugar los 4 segadores.",
+        "Enfócate en darle a Yone Valor del Titán y Mano de la Justicia o Sanguinaria; El 3er objeto puede ser capa mercurial o Guinsoo Sube rápido a Nivel 7 para buscar a Yone 3 estrellas."
+      ],
+      "Composiciones_Early": "https://guiadeparche.com/wp-content/uploads/2024/04/Yone-Juego-Temprano.png",
+      "Composiciones_Mid": "https://guiadeparche.com/wp-content/uploads/2024/03/Yone-Juego-Medio.png"
+    },
+    "sinergias": "Celestiales(7) Segadores(4)"
+  },
+  {
+    "titulo": "Duelista 3 estrellas",
+    "composicion": "https://guiadeparche.com/wp-content/uploads/2024/03/8-Duelista-Voli-y-Tristana-3-estrellas.png",
+    "imgTitular": "https://guiadeparche.com/tftdata/Set11/metaComps/campeones_bordes/volibear-duelista-3.jpg",
+    "pestañas": {
+      "Aumentos": [
+        "TFT11_Augment_TwoforOne",
+        "TFT11_Augment_Accomplice",
+        "TFT9_Augment_GargantuanResolve",
+        "TFT9_Augment_CombatCaster",
+        "TFT9_Augment_Formation1",
+        "TFT9_Augment_StationarySupport1",
+        "TFT7_Augment_BandOfThieves1"
+      ],
+      "Tips": [
+        "Role at Level 7 to have 6 duelists, you must find 1 Lee Sin (if you do not have a duelist spatula) it is your greatest power peak since you gain resistances for all duelists in addition to greater speed"
+      ],
+      "Consejos": [
+        "Rolea en Nivel 7 para tener 6 duelistas, deberás encontrar 1 Lee Sin (sino tienes espátula de duelista) es tu mayor pico de poder ya que ganas resistencias para todos los duelistas ademas de mayor velocidad"
+      ],
+      "Composiciones_Early": "https://guiadeparche.com/wp-content/uploads/2024/04/Tristana-Juego-Temprano.png",
+      "Composiciones_Mid": "https://guiadeparche.com/wp-content/uploads/2024/04/Tristana-Juego-Medio.png",
+      "Gameplay": "https://www.youtube.com/watch?v=wjZY2TTP58U"
+    },
+    "sinergias": "Duelista(8) Dragonlord(2) Heavenly(2) Sage(2) Great(1)"
+  },
+  {
+    "titulo": "Arcanistas Lux 3",
+    "composicion": "https://guiadeparche.com/tftdata/Set11/metaComps/composiciones/Lux-Arcanista-3.png",
+    "imgTitular": "https://guiadeparche.com/tftdata/Set11/metaComps/campeones_bordes/lux-arcanista-3.png",
+    "pestañas": {
+      "Aumentos": [
+        "TFT11_Augment_Porcelain",
+        "TFT7_Augment_BestFriends2",
+        "TFT11_Augment_PorcelainCrest",
+        "TFT11_Augment_OverEncumbered",
+        "TFT7_Augment_BestFriends1",
+        "TFT9_Augment_Commander_FinalAscension",
+        "TFT9_Augment_Legend_PumpingUp",
+        "TFT11_Augment_TrashToTreasure"
+      ],
+      "Tips": [
+        "You can stabilize a little at level 6, with front line and Lux ​​2 star. But look to go up to level 7 as soon as possible since that's where your peak power is with 6 Arcanists.",
+        "Your main carry is Lux and then it will be Zoe (if not contested) or Syndra"
+      ],
+      "Consejos": [
+        "Puedes estabilizar un poco en el nivel 6, con linea frontal y Lux 2 estrella. Pero busca subir cuanto antes a nivel 7 ya que allí esta tu pico de poder con 6 Arcanistas.",
+        "Tu carry principal es Lux y luego será Zoe (si no está contesteada) o Syndra"
+      ]
+    },
+    "sinergias": "Arcanista(6) de Porcelana(2) Tanques(2)"
+  },
+  {
+    "titulo": "Legendarias AP Hwei",
+    "composicion": "https://guiadeparche.com/wp-content/uploads/2024/03/Fast-9-Legendarias-AP.png",
+    "imgTitular": "https://guiadeparche.com/tftdata/Set11/metaComps/campeones_bordes/hwei-dragonlord.jpg",
+    "pestañas": {
+      "Aumentos": [
+        "TFT6_Augment_TheGoldenEgg",
+        "TFT6_Augment_JeweledLotus",
+        "TFT9_Augment_BigGrabBag",
+        "TFT9_Augment_OldMansWalkingStick",
+        "TFT11_Augment_Epoch",
+        "TFT6_Augment_Legend_TinyTitans",
+        "TFT7_Augment_LategameSpecialist"
+      ],
+      "Tips": [
+        "AD: The best items in Irelia are: Red Buff, Runnan’s Hurancan, Giant Slayer and Hextech Gunblade. Irelia already has resistance reduction (in her ability) so don’t give her last breath.",
+        "AP:",
+        "- Prioritize first augment in economy if it is not very difficult to reach level 9.",
+        "- Prioritize having Spear of Shojin and Morello on Teemo in the early game and they will be for Hwei when you reach level 9."
+      ],
+      "Consejos": [
+        "AD: Los mejores objetos en Irelia son: Bufo Rojo, Hurancan de Runnan’s, Verdugo de Gigantes y Sable Pistla Hextech Irelia ya tiene reducción de resistencias (para ella en su habilidad) asi que no le das último suspiro",
+        "AP:",
+        "– Prioriza primer aumento de economía sino es muy dificil llega a nivel 9.",
+        "– Prioriza tener Lanza de Shojin y Morello en Teemo en juego temprano y serán para Hwei al llegar a nivel 9"
+      ]
+    },
+    "sinergias": "Dragonlord(3) Altruist(2) Behemot(2) Dryad(2) Heavenly(2) Invoker(2) Sage(2) Artist(1) Great(1) Lovers(1) Spirit Walker(1)"
+  },
+  {
+    "titulo": "Miticos Bardo 3",
+    "composicion": "https://guiadeparche.com/wp-content/uploads/2024/03/Altruista-Bardo-Set-11-TFT-Meta-Comp.png",
+    "imgTitular": "https://guiadeparche.com/tftdata/Set11/metaComps/campeones_bordes/bardo-mitico-3.jpg",
+    "pestañas": {
+      "Aumentos": [
+        "TFT9_Augment_Legend_PumpingUp3",
+        "TFT9_Augment_StationarySupport1",
+        "TFT9_Augment_YouHaveMyBow",
+        "TFT9_Augment_OldMansWalkingStick"
+      ],
+      "Tips": [
+        "Play this comp when you get Bard or Tahm Kench early on neutral orbs Priority is tank items on Tahm Kench and Guinsoo's on Bard"
+      ],
+      "Consejos": [
+        "Juega esta comp cuando te dan Bardo o Tahm Kench temprano en orbes de neutrales La prioridad es objetos de tanque en Tahm Kench y Guinsoo's en Bardo"
+      ],
+      "Composiciones_Early": "https://guiadeparche.com/wp-content/uploads/2024/04/Bardo-Juego-Temprano.png",
+      "Composiciones_Mid": "https://guiadeparche.com/wp-content/uploads/2024/04/Bardo-Juego-Medio.png",
+      "Gameplay": "https://www.youtube.com/watch?v=OMNKY15GXBs"
+    },
+    "sinergias": "Altruista (3) Mítico(3) Storyweaver(3) Arcanista(2) Bruiser(2) Heavenly(2) Trickshot(2) Lovers(1)"
+  },
+  {
+    "titulo": "Malphite Gargantua Resolve",
+    "composicion": "https://guiadeparche.com/wp-content/uploads/2024/04/Malphite-Gargantua-Meme.png",
+    "imgTitular": "https://guiadeparche.com/tftdata/Set11/metaComps/campeones_bordes/malphite-3.png",
+    "pestañas": {},
+    "sinergias": "Behemoth(6) Celestiales(3) Fantasmales(2) Sage(2) Spirit Walker(1)"
+  },
+  {
+    "titulo": "Erudito Morgana",
+    "composicion": "https://guiadeparche.com/tftdata/Set11/metaComps/composiciones/morgana-erudito.png",
+    "imgTitular": "https://guiadeparche.com/tftdata/Set11/metaComps/campeones_bordes/morgana-erudito.png",
+    "pestañas": {
+      "Aumentos": [
+        "TFT9_Augment_NotToday",
+        "TFT11_Augment_Calltochaos",
+        "TFT6_Augment_ForceOfNature",
+        "TFT9_Augment_TonsOfStats",
+        "TFT9_Augment_CombatCaster",
+        "TFT9_Augment_GiftsFromTheFallen",
+        "TFT9_Augment_Idealism",
+        "TFT11_Augment_RainingGold"
+      ]
+    },
+    "sinergias": "Erudito(4) Altruista(3) Tejehistorias(3) Celestial(2) Domadragones(2) Fantasmal(2) Matón(2) Amantes(1) Excelente(1)"
+  }
+]

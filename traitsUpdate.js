@@ -14,7 +14,8 @@ async function getTraitsUpdates(url) {
 
         fs.writeFile('traits.json', JSON.stringify(newTraits), (err) => {
           if (err) {
-            throw new Error('Something went wrong.');
+            console.log('error'.err);
+            return;
           }
           console.log('JSON written to file. Contents:');
         });
